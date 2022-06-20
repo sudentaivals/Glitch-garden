@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f33d8d414737b48b53a61696c96295, type: 3}
+  m_Name: Default defender UI action
+  m_EditorClassIdentifier: 
+  _buttonSprites:
+  - {fileID: 6762294671284738582, guid: c12c38eba3890fd47927b070936608ca, type: 3}
+  _buttonAngle:
+  - -90
