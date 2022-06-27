@@ -32,6 +32,7 @@ public class StarsManager : MonoBehaviour
 
     private void PlaySFX(AudioClip clip)
     {
+        SoundManager.Instance.PlayClip(_volume, clip);
         AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position, _volume);
     }
 

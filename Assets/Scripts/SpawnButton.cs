@@ -33,7 +33,7 @@ public class SpawnButton : MonoBehaviour
 
     private void PlayWaveStartSound(GameObject sender)
     {
-        AudioSource.PlayClipAtPoint(_waveStartSound, Camera.main.transform.position, _waveStartSoundVolume);
+        SoundManager.Instance.PlayClip(_waveStartSoundVolume, _waveStartSound);
     }
 
     private void DisableButton(GameObject sender)

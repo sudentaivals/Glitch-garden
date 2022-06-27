@@ -41,11 +41,6 @@ public class MouseOverDefender : MonoBehaviour
                 float newY = Mathf.Clamp(snapPos.y, _placeGridYStart, _placeGridYEnd);
                 item.position = new Vector2(newX, newY);
             }
-            //cancel
-            if (Input.GetMouseButtonDown(1))
-            {
-                GameplayEventBus.Publish(GameplayEventType.UIObjectDeactivated, gameObject);
-            }
         }
     }
 

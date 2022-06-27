@@ -51,7 +51,7 @@ public class LivesManager : MonoBehaviour
     {
         if(_enemyPassSound != null)
         {
-            AudioSource.PlayClipAtPoint(_enemyPassSound, Camera.main.transform.position, _enemyPassSoundVolume);
+            SoundManager.Instance.PlayClip(_enemyPassSoundVolume, _enemyPassSound);
         }
     }
 

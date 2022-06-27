@@ -11,7 +11,8 @@ public class PlaySFXAction : BaseAction
     {
         if (sfx != null)
         {
-            AudioSource.PlayClipAtPoint(sfx, Camera.main.transform.position, sfxVolume);
+            //AudioSource.PlayClipAtPoint(sfx, Camera.main.transform.position, sfxVolume);
+            SoundManager.Instance.PlayClip(sfxVolume, sfx);
         }
     }
 

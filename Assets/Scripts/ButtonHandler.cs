@@ -20,6 +20,16 @@ public class ButtonHandler : MonoBehaviour
 
     }
 
+    public void LoadOptions()
+    {
+        LevelLoader.Instance.LoadConcreteScene("Options");
+    }
+
+    public void StartGame()
+    {
+        LevelLoader.Instance.LoadConcreteScene("Gameplay");
+    }
+
     public void ExitGame()
     {
         Application.Quit();

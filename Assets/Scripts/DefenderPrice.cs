@@ -28,6 +28,6 @@ public class DefenderPrice : MonoBehaviour
 
     private void PlaySFX()
     {
-        if(_sellSFX != null) AudioSource.PlayClipAtPoint(_sellSFX, Camera.main.transform.position, _sellSFXVolume);
+        if (_sellSFX != null) SoundManager.Instance.PlayClip(_sellSFXVolume, _sellSFX);
     }
 }

@@ -58,7 +58,7 @@ public abstract class BaseShooter : MonoBehaviour
     {
         if (IsShootReady)
         {
-            if (_spawnClip != null) AudioSource.PlayClipAtPoint(_spawnClip, Camera.main.transform.position, _spawnSoundVolume);
+            if (_spawnClip != null) SoundManager.Instance.PlayClip(_spawnSoundVolume, _spawnClip);
             Shoot();
             _currentCooldown = _baseCooldown;
         }

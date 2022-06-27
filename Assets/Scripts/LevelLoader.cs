@@ -24,6 +24,18 @@ public class LevelLoader : Singleton<LevelLoader>
         SceneManager.LoadScene(1);
     }
 
+
+    public void LoadConcreteScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void LoadConcreteScene(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
+    }
+
+
     public void LoadNextScene()
     {
         Time.timeScale = 1;

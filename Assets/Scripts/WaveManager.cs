@@ -60,6 +60,7 @@ public class WaveManager : MonoBehaviour
     {
         if (CurrentSpawnerState == EnemySpawnerState.Finish) return;
         GameplayEventBus.Publish(GameplayEventType.StartWave, gameObject);
+        MusicManager.Instance.Transition("BattleMusic");
         if (CheckWave())
         {
             CurrentSpawnerState = EnemySpawnerState.Spawning;
@@ -108,6 +109,7 @@ public class WaveManager : MonoBehaviour
             return;
         }
         GameplayEventBus.Publish(GameplayEventType.StartMidWave, gameObject);
+        MusicManager.Instance.Transition("MidwaveMusic");
     }
 
     private void Finish()

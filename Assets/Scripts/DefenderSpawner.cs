@@ -89,6 +89,6 @@ public class DefenderSpawner : MonoBehaviour
 
     private void PlaySFX()
     {
-        if(_spawnSound!=null)AudioSource.PlayClipAtPoint(_spawnSound, Camera.main.transform.position, _spawnSoundVolume);
+        if(_spawnSound!=null) SoundManager.Instance.PlayClip(_spawnSoundVolume, _spawnSound);
     }
 }
