@@ -34,8 +34,8 @@ public class SoundManager : Singleton<SoundManager>
 
     public void PlayClip(float volume, AudioClip clip)
     {
-        var availableSources = _audioSources.Where(a => !a.isPlaying).ToList();
-        if(availableSources.Count == 0)
+        var availableSources = _audioSources.FirstOrDefault(a => !a.isPlaying);
+        if(availableSources == null)
         {
             var newSource = AddNewSource();
             newSource.clip = clip;
@@ -44,10 +44,9 @@ public class SoundManager : Singleton<SoundManager>
         }
         else
         {
-            var source = availableSources.First();
-            source.clip = clip;
-            source.volume = volume * SoundVolume;
-            source.Play();
+            availableSources.clip = clip;
+            availableSources.volume = volume * SoundVolume;
+            availableSources.Play();
         }
     }
 
